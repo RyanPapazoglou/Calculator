@@ -1,0 +1,78 @@
+<!doctype html>
+<html?>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">       
+    <title>Calculator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="styles.css" />
+    <script type="text/javascript" src="main.js">
+</script>
+</head>
+<body>
+    <div class = "calc">
+        <table border="2px">
+            <tr>
+                <textarea rows="1" cols="20" id="display">0</textarea>
+            </tr>
+            <tr>
+                <td>
+                    <button type="button" value=7 id= "7" onClick="operate(document.getElementById('7').value)">7</button>
+                </td>
+                <td>
+                    <button type="button" value=8 id= "8" onClick="operate(document.getElementById('8').value)">8</button>
+                </td>
+                <td>
+                    <button type="button" value=9 id= "9" onClick="operate(document.getElementById('9').value)">9</button>
+                </td>
+                <td>
+                    <button type="button">/</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="button" value=4 id= "4" onClick="operate(document.getElementById('4').value)">4</button>
+                </td>
+                <td>
+                    <button type="button" value=5 id= "5" onClick="operate(document.getElementById('5').value)">5</button>
+                </td>
+                <td>
+                    <button type="button" value=6 id= "6" onClick="operate(document.getElementById('6').value)">6</button>
+                </td>
+                <td>
+                    <button type="button">*</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="button" id="1" value=1 onClick="operate(document.getElementById('1').value)">1</button>
+                </td>
+                <td>
+                    <button type="button" value=2 id= "2" onClick="operate(document.getElementById('2').value)">2</button>
+                </td>
+                <td>
+                    <button type="button" value=3 id= "3" onClick="operate(document.getElementById('3').value)">3</button>
+                </td>
+                <td>
+                    <button type="button" value=4 id= "4" onClick="operate(document.getElementById('4').value)">=</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="button">+</button>
+                </td>
+                <td>
+                    <button type="button" value=0>0</button>
+                </td>
+                <td>
+                    <button type="button">-</button>
+                </td>
+                <td>
+                    <button type="button" onClick="clear()">C</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+</body>
+</html>

@@ -1,8 +1,17 @@
-#calc {
-    background-color: aqua;
+.calc {
     margin: auto;
-    width: 50%;
+
 }
-body {
-    margin: auto;
+
+#table {
+    text-align: right;
+}
+
+.number {
+    background-color: red;
+}
+
+.operand { 
+    background-color: black;
+    color: aliceblue;
 }

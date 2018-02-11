@@ -11,68 +11,67 @@
 </head>
 <body>
     <div class = "calc">
-        <table border="2px">
+        <table border="2px" class="table">
             <tr>
-                <textarea rows="1" cols="20" id="display">0</textarea>
+                <input id="display" type="text" name="display" readonly value=0>
             </tr>
             <tr>
                 <td>
-                    <button type="button" value=7 id= "7" onClick="operate(document.getElementById('7').value)">7</button>
+                    <button type="button" value=7 id= "7" class="number" onClick="operate(8)">7</button>
                 </td>
                 <td>
-                    <button type="button" value=8 id= "8" onClick="operate(document.getElementById('8').value)">8</button>
+                    <button type="button" value=8 id= "8" class="number" onClick="operate(8)">8</button>
                 </td>
                 <td>
-                    <button type="button" value=9 id= "9" onClick="operate(document.getElementById('9').value)">9</button>
+                    <button type="button" value=9 id= "9" class="number" onClick="operate(9)">9</button>
                 </td>
                 <td>
-                    <button type="button">/</button>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <button type="button" value=4 id= "4" onClick="operate(document.getElementById('4').value)">4</button>
-                </td>
-                <td>
-                    <button type="button" value=5 id= "5" onClick="operate(document.getElementById('5').value)">5</button>
-                </td>
-                <td>
-                    <button type="button" value=6 id= "6" onClick="operate(document.getElementById('6').value)">6</button>
-                </td>
-                <td>
-                    <button type="button">*</button>
+                    <button type="button" class="operand" >/</button>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <button type="button" id="1" value=1 onClick="operate(document.getElementById('1').value)">1</button>
+                    <button type="button" value=4 id= "4" class="number" onClick="operate(4)">4</button>
                 </td>
                 <td>
-                    <button type="button" value=2 id= "2" onClick="operate(document.getElementById('2').value)">2</button>
+                    <button type="button" value=5 id= "5" class="number" onClick="operate(5)">5</button>
                 </td>
                 <td>
-                    <button type="button" value=3 id= "3" onClick="operate(document.getElementById('3').value)">3</button>
+                    <button type="button" value=6 id= "6" class="number" onClick="operate(6)">6</button>
                 </td>
                 <td>
-                    <button type="button" value=4 id= "4" onClick="operate(document.getElementById('4').value)">=</button>
+                    <button type="button" class="operand">*</button>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <button type="button">+</button>
+                    <button type="button" value=1 id="1" class="number" onClick="operate(1)">1</button>
                 </td>
                 <td>
-                    <button type="button" value=0>0</button>
+                    <button type="button" value=2 id= "2" class="number" onClick="operate(2)">2</button>
                 </td>
                 <td>
-                    <button type="button">-</button>
+                    <button type="button" value=3 id= "3" class="number" onClick="operate(3)">3</button>
                 </td>
                 <td>
-                    <button type="button" onClick="clear()">C</button>
+                    <button type="button" class="operand">=</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="button" class="operand">+</button>
+                </td>
+                <td>
+                    <button type="button" id="0" value=0 class="number" onClick="operate(0)">0</button>
+                </td>
+                <td>
+                    <button type="button" class="operand">-</button>
+                </td>
+                <td>
+                    <button type="button" id=C onClick="display.value = 0">C</button>
                 </td>
             </tr>
         </table>
     </div>
-
 </body>
 </html>

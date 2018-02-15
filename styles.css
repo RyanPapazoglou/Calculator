@@ -1,17 +1,34 @@
 .calc {
     margin: auto;
-
+    background-color: beige;
+    width: 127px;
+    border: black solid;
+    border-radius: 5px;
+}
+#display {
+    width: 120px;
+    text-align: right;
+    background-color: beige;
+    border: red solid;
+    border-radius: 5px;
 }
 
 #table {
+    align-self: auto;
     text-align: right;
 }
 
 .number {
     background-color: red;
+    color: white;
 }
 
 .operand { 
     background-color: black;
     color: aliceblue;
+}
+
+#button {
+    display: block;
+    margin: auto;
 }

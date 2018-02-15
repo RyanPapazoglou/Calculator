@@ -1,8 +1,7 @@
 <!doctype html>
 <html?>
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">       
+    <meta charset="utf-8" />     
     <title>Calculator</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="styles.css" />
@@ -17,7 +16,7 @@
             </tr>
             <tr>
                 <td>
-                    <button type="button" value=7 id= "7" class="number" onClick="operate(8)">7</button>
+                    <button type="button" value=7 id= "7" class="number" onClick="operate(7)">7</button>
                 </td>
                 <td>
                     <button type="button" value=8 id= "8" class="number" onClick="operate(8)">8</button>
@@ -26,7 +25,7 @@
                     <button type="button" value=9 id= "9" class="number" onClick="operate(9)">9</button>
                 </td>
                 <td>
-                    <button type="button" class="operand" >/</button>
+                    <button type="button" class="operand" onClick="opStack.push('/')">/</button>
                 </td>
             </tr>
             <tr>
@@ -40,7 +39,7 @@
                     <button type="button" value=6 id= "6" class="number" onClick="operate(6)">6</button>
                 </td>
                 <td>
-                    <button type="button" class="operand">*</button>
+                    <button type="button" class="operand" onClick="opStack.push('*')">*</button>
                 </td>
             </tr>
             <tr>
@@ -54,21 +53,32 @@
                     <button type="button" value=3 id= "3" class="number" onClick="operate(3)">3</button>
                 </td>
                 <td>
-                    <button type="button" class="operand">=</button>
+                    <button type="button" id="=" class="operand" onClick="calculate()">=</button>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <button type="button" class="operand">+</button>
+                    <button type="button" class="operand" onClick="opStack.push('+')">+</button>
                 </td>
                 <td>
                     <button type="button" id="0" value=0 class="number" onClick="operate(0)">0</button>
                 </td>
                 <td>
-                    <button type="button" class="operand">-</button>
+                    <button type="button" class="operand" onClick="opStack.push('-')">-</button>
                 </td>
                 <td>
-                    <button type="button" id=C onClick="display.value = 0">C</button>
+                    <button type="button" class="operand" id="C" onClick="display.value = 0">C</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="button" class="operand" id="." onClick="decimal('.')">.</button>
+                </td>
+                <td>
+                    <button type="button" class="operand" id="+/-" onclick="changeSign()">±</button>
+                </td>
+                <td>
+                    <button type="button" class="operand" id="push" onClick="numStack.push(document.getElementById('display').value); document.getElementById('display').value=0;">P</button>
                 </td>
             </tr>
         </table>

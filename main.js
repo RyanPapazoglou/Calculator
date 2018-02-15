@@ -8,30 +8,31 @@ var op1;
 var op2;
 var opPushed;
 
-// function popVals () {
-//     operator = (opStack.pop());
-//     op2 = parseInt(numStack.pop());
-//     op1 = parseInt(numStack.pop());
-// }
-
 function calculate() {
     operator = (opStack.pop());
-    var op2 = parseInt(numStack.pop());
-    var op1 = parseInt(numStack.pop());
+    var op2 = parseFloat(numStack.pop());
+    var op1 = parseFloat(numStack.pop());
     switch (operator) {
         case "+":
-            show(op1 + op2);
+            result = op1 + op2;
+            show(result.toPrecision(4));
+            result = 0;
             break;
         case "-":
-            show(op1 - op2);
+            result = op1 - op2;
+            show(result.toPrecision(4));
+            result = 0;
             break;
         case "*":
-             show(op1 * op2);
+            result = op1 * op2;
+            show(result.toPrecision(4));
+            result = 0;
             break;
         case "/":
-            show(op1 / op2);
+            result = op1 / op2;
+            show(result.toPrecision(4));
+            result = 0;
             break;
-        //show(result);
     }
 }
 
@@ -46,9 +47,8 @@ function decimal(x){
 }
 
 function operate(x) {
-    if(document.getElementById('display').value == 0 || opPushed){
+    if(document.getElementById('display').value == 0){
         document.getElementById('display').value = x;
-        opPushed = false;
     } else {
         document.getElementById('display').value += x;
     }
@@ -58,10 +58,6 @@ function changeSign() {
     document.getElementById('display').value = document.getElementById('display').value * -1;
 }
 
-function flag () {
-    opPushed = true;
-    return opPushed;
-}
 
 
 

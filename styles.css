@@ -1,3 +1,7 @@
+body {
+    background-color: burlywood;
+}
+
 .calc {
     margin: auto;
     background-color: beige;
@@ -5,6 +9,16 @@
     border: black solid;
     border-radius: 5px;
 }
+
+.instructions {
+    font-family: 'Arial';
+    border: black solid;
+    border-radius: 5px;
+    color: rgb(26, 26, 219);
+    width:auto;
+    text-align: center;
+}
+
 #display {
     width: 120px;
     text-align: right;
@@ -28,7 +42,12 @@
     color: aliceblue;
 }
 
-#button {
+.button {
     display: block;
     margin: auto;
+    align-self: auto;
+}
+
+td:hover {
+    background-color: #70ec60;
 }

@@ -10,8 +10,8 @@ var opPushed;
 
 function calculate() {
     operator = (opStack.pop());
-    var op2 = parseFloat(numStack.pop());
     var op1 = parseFloat(numStack.pop());
+    var op2 = parseFloat(numStack.pop());
     switch (operator) {
         case "+":
             result = op1 + op2;

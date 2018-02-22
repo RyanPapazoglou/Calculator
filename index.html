@@ -11,76 +11,78 @@
 <body>
     <div class = "calc">
         <table border="2px" class="table">
-            <tr>
-                <input id="display" type="text" name="display" readonly value=0>
-            </tr>
-            <tr>
-                <td>
-                    <button type="button" value=7 id= "7" class="number" onClick="operate(7)">7</button>
-                </td>
-                <td>
-                    <button type="button" value=8 id= "8" class="number" onClick="operate(8)">8</button>
-                </td>
-                <td>
-                    <button type="button" value=9 id= "9" class="number" onClick="operate(9)">9</button>
-                </td>
-                <td>
-                    <button type="button" class="operand" onClick="opStack.push('/')">/</button>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <button type="button" value=4 id= "4" class="number" onClick="operate(4)">4</button>
-                </td>
-                <td>
-                    <button type="button" value=5 id= "5" class="number" onClick="operate(5)">5</button>
-                </td>
-                <td>
-                    <button type="button" value=6 id= "6" class="number" onClick="operate(6)">6</button>
-                </td>
-                <td>
-                    <button type="button" class="operand" onClick="opStack.push('*')">*</button>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <button type="button" value=1 id="1" class="number" onClick="operate(1)">1</button>
-                </td>
-                <td>
-                    <button type="button" value=2 id= "2" class="number" onClick="operate(2)">2</button>
-                </td>
-                <td>
-                    <button type="button" value=3 id= "3" class="number" onClick="operate(3)">3</button>
-                </td>
-                <td>
-                    <button type="button" id="=" class="operand" onClick="calculate()">=</button>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <button type="button" class="operand" onClick="opStack.push('+')">+</button>
-                </td>
-                <td>
-                    <button type="button" id="0" value=0 class="number" onClick="operate(0)">0</button>
-                </td>
-                <td>
-                    <button type="button" class="operand" onClick="opStack.push('-')">-</button>
-                </td>
-                <td>
-                    <button type="button" class="operand" id="C" onClick="display.value = 0">C</button>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <button type="button" class="operand" id="." onClick="decimal('.')">.</button>
-                </td>
-                <td>
-                    <button type="button" class="operand" id="+/-" onclick="changeSign()">±</button>
-                </td>
-                <td>
-                    <button type="button" class="operand" id="push" onClick="numStack.push(document.getElementById('display').value); document.getElementById('display').value=0;">P</button>
-                </td>
-            </tr>
+            <tbody>
+                <tr>
+                    <input id="display" type="text" name="display" readonly value=0>
+                </tr>
+                <tr>
+                    <td>
+                        <button type="button" value=7 id= "7" class="number" onClick="operate(7)">7</button>
+                    </td>
+                    <td>
+                        <button type="button" value=8 id= "8" class="number" onClick="operate(8)">8</button>
+                    </td>
+                    <td>
+                        <button type="button" value=9 id= "9" class="number" onClick="operate(9)">9</button>
+                    </td>
+                    <td>
+                        <button type="button" class="operand" onClick="opStack.push('/')">/</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button type="button" value=4 id= "4" class="number" onClick="operate(4)">4</button>
+                    </td>
+                    <td>
+                        <button type="button" value=5 id= "5" class="number" onClick="operate(5)">5</button>
+                    </td>
+                    <td>
+                        <button type="button" value=6 id= "6" class="number" onClick="operate(6)">6</button>
+                    </td>
+                    <td>
+                        <button type="button" class="operand" onClick="opStack.push('*')">*</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button type="button" value=1 id="1" class="number" onClick="operate(1)">1</button>
+                    </td>
+                    <td>
+                        <button type="button" value=2 id= "2" class="number" onClick="operate(2)">2</button>
+                    </td>
+                    <td>
+                        <button type="button" value=3 id= "3" class="number" onClick="operate(3)">3</button>
+                    </td>
+                    <td>
+                        <button type="button" id="=" class="operand" onClick="calculate()">=</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button type="button" class="operand" onClick="opStack.push('+')">+</button>
+                    </td>
+                    <td>
+                        <button type="button" id="0" value=0 class="number" onClick="operate(0)">0</button>
+                    </td>
+                    <td>
+                        <button type="button" class="operand" onClick="opStack.push('-')">-</button>
+                    </td>
+                    <td>
+                        <button type="button" class="operand" id="C" onClick="display.value = 0">C</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button type="button" class="operand" id="." onClick="decimal('.')">.</button>
+                    </td>
+                    <td>
+                        <button type="button" class="operand" id="+/-" onclick="changeSign()">±</button>
+                    </td>
+                    <td>
+                        <button type="button" class="operand" id="push" onClick="numStack.push(document.getElementById('display').value); document.getElementById('display').value=0;">P</button>
+                    </td>
+                </tr>
+            </tbody>
         </table>
     </div>
     <div class="instructions">
@@ -91,8 +93,10 @@
                 3. Enter your second number, again press 'P' <br/>
                 4. Press '=' <br/>
 
-                Note: when pressing 'P', the calculator will display 'stored' letting you know it is remembering your entered number </br>
-                Request: Please press 'C' after you've completed an operation!
+                Note: when pressing 'P', the calculator will display '0', however it is remembering your entered number </br>
+                Note: To use a result in the next operation, remember to press 'P', so the calculator knows it needs to store that value! <br/>
+                Request: Please press 'C' after you've completed an operation if you do not want to use that number!
+
         </p>
     </div>
 </body>
